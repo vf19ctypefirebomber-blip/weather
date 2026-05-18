@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>天気予報アプリ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>天気予報</h1>
+      <button id="unit-btn" class="btn-secondary">°F に切替</button>
+    </header>
+
+    <div class="search-section">
+      <div class="search-bar">
+        <input
+          type="text"
+          id="city-input"
+          placeholder="都市名を入力（例: Tokyo, Osaka）"
+          autocomplete="off"
+        />
+        <button id="search-btn">検索</button>
+        <button id="location-btn" title="現在地を取得">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/>
+          </svg>
+        </button>
+      </div>
+      <div id="history-tags" class="history-tags"></div>
+    </div>
+
+    <div id="error-msg" class="error-msg hidden"></div>
+
+    <div id="loading" class="loading hidden">
+      <div class="spinner"></div>
+    </div>
+
+    <div id="weather-result" class="hidden">
+      <div id="current-weather"></div>
+      <div id="forecast"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

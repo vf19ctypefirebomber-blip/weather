@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\user\\\\downloads\\\\claude\\\\weather\" -Recurse -Force | Where-Object { -not $_.PSIsContainer } | Select-Object FullName)",
+      "PowerShell(cmd /c \"dir /s /b C:\\\\Users\\\\user\\\\downloads\\\\claude\\\\weather\")",
+      "WebFetch(domain:openweathermap.org)",
+      "PowerShell(Get-Command *)",
+      "PowerShell($git = \"C:\\\\Program Files\\\\Git\\\\bin\\\\git.exe\"; Set-Location \"C:\\\\Users\\\\user\\\\downloads\\\\claude\\\\weather\"; & $git init; & $git add .; & $git commit -m \"Initial commit\"; & $git branch -M main; & $git remote add origin https://github.com/vf19ctypefirebomber-blip/weather.git; & $git push -u origin main)"
+    ]
+  }
+}
