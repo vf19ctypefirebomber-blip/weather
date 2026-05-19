@@ -40,6 +40,10 @@ app.get('/api/forecast', async (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
-  console.log(`サーバー起動: http://localhost:${PORT}`);
-});
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`サーバー起動: http://localhost:${PORT}`);
+  });
+}
+
+module.exports = app;
